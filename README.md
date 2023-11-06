@@ -75,3 +75,10 @@ const store = createStore(rootReducers);
 ## Install Redux
 
 npm install redux react-redux
+
+## Steps
+<li>Create action folder and create actions files and function</li>
+<li>Create reducer folder and create reducers and index files and function</li>
+<li>In reducers files create functions and then reducers are combined in index file</li>
+<li>Create store file and store is created using combined reducers created in index of reducer folder</li>
+<li>store file is then imported in main.jsx file</li>
