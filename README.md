@@ -82,3 +82,40 @@ npm install redux react-redux
 <li>In reducers files create functions and then reducers are combined in index file</li>
 <li>Create store file and store is created using combined reducers created in index of reducer folder</li>
 <li>store file is then imported in main.jsx file</li>
+
+## Provider
+
+The Provider component is used at the root of your React component tree to ensure that Redux store data is accessible to any component that needs it, without having to pass props manually at each level of the component hierarchy.
+
+```
+<Provider store={store}>
+    <App />
+</Provider>,
+```
+
+## useSelector
+
+useSelector is a hook provided by the React-Redux library that allows to select data from the Redux store in a functional component. It is commonly used in React components to access and read data from the Redux store. useSelector takes a selector function as an argument and returns the selected data from the store.
+
+```
+import {useSelector} from "react-redux"
+const stateData = useSelector((state) => state.reducerFunction);
+```
+
+## useDispatch
+
+useDispatch is a hook provided by the React-Redux library that allows functional components to dispatch actions to the Redux store. It provides a reference to the dispatch function, which is used to send actions to the Redux store.
+
+```
+import {useDispatch} from "react-redux"
+const dispatch = useDispatch();
+
+// Dispatch an action
+dispatch(actiom);
+```
+
+### Redux program flow
+
+<li>Dispatch tiggers action.</li>
+<li>After action is triggered, reducerFunction runs which updates the state.</li>
+<li>Using selector, the updated state is used.</li>
