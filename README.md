@@ -35,7 +35,7 @@ return {
 <li>Pure function that creates an action.</li>
 
 ```
-const increment_number = ()=>{
+const increment_number = (num)=>{
     return {
         type: 'INCREMENT',
         payload: num
